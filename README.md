@@ -103,3 +103,8 @@ First, our system environment is set up according to the following configuration
 3. T5-Large: Run `T5.ipynb` in the `models/` directory:
     - Unlike t5-Base, set parameter weight = 't5-large'.
     - Other steps are similar to the above.
+  
+## Citation
+Please cite the following paper if you use these codes and datasets in your work.
+
+> Xinyi Yan, Yingyi Zhang, Chengzhi Zhang. Utilizing Cognitive Signals Generated during Human Reading to Enhance Keyphrase Extraction from Microblogs. ***Information Management & Processing***, 2023 (under review). 
