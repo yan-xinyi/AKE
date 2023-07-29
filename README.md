@@ -15,7 +15,7 @@ The results verified the enhancement of cognitive signals genarated during human
 ## Directory structure
 ```Root Directory
 AKE
-├── datas
+├── dataset
 │   ├── Election-Trec
 │   │    ├── test
 │   │    └── train
@@ -46,7 +46,7 @@ AKE
 ```
 
 ## Dataset discription
-We release our all train and test data in "datas" directory, In the dataset below, cognitive features have been spliced between each word and the corresponding label:
+We release our all train and test data in "dataset" directory, In the dataset below, cognitive features have been spliced between each word and the corresponding label:
 1. Election-Trec Dataset: The Election-Trec dataset4 is derived from the open-source dataset TREC2011 track4. After removing all "#" symbols, it contains 24,210 training tweets and 6,054 testing tweets.
 2. General-Twitter Dataset: Developed by (Zhang et al., 2016), employs Hashtags as keyphrases for each tweet. It consists of 78,760 training tweets and 33,755 testing tweets, with an average sentence length of about 13 words.
 
