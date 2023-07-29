@@ -5,7 +5,7 @@ Data and source Code for the paper "Utilizing Cognitive Signals Generated during
 
 Nowadays, Automatic Keyphrase Extraction (AKE) with single eye-tracking source is constrained by physiological mechanism, signal processing techniques and other factors. In this paper, we propose to utilize EEG and eye-tracking signals to enhance AKE from Microblogs. Our work includes the followig aspects:
 
-  - We applied different types of cognitive signals generated during human reading to AKE from Microblogs for the first time. Specifically, we combine EEG signals and Eye-tracking signals jointly to AKE based on the open-source cognitive language processing corpus ZUCO.
+  - We applied different types of cognitive signals generated during human reading to AKE from Microblogs for the first time. Specifically, we combine EEG signals and Eye-tracking signals jointly to AKE based on the open-source cognitive language processing corpus [ZUCO](https://www.nature.com/articles/sdata2018291).
   -  We compared the effects of different frequency bands of EEG signals on the performance of the AKE.
   -  Furthermore, we evaluated AKE by combining the most effective EEG signals and eye-tracking signals from single-source cognitive signal tests.
   -  Analyzing the unsatisfactory results of the previous experiments, we improved the AKE model based on Pretrained Language Models (PLMs): First, we incorporate Glove embeddings into the input layer of the SATT-BiLSTM+CRF model, which exhibited the best AKE test performance. Second, we propose an improved AKE based on BERT. Lastly, we implemented an improved AKE based on the T5 (including T5-Base and T5-Large).
