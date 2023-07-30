@@ -63,7 +63,7 @@ We release our all train and test data in "dataset" directory, In the dataset be
 
 There are 17 Eye-tracking features and 8 EEG features were extracted from the dataset:
 
-- Eye-tracking features
+- <b>Eye-tracking features</b>
 
   In ZUCO Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features,encompassing all gaze behavior stages and contextual influences. Early-Stage Features reflect readers' initial comprehension and cognitive processing of the text, while Late-Stage Features indicate readers' syntactic and semantic comprehension. Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
 
@@ -71,7 +71,7 @@ There are 17 Eye-tracking features and 8 EEG features were extracted from the da
 <img src="https://github.com/yan-xinyi/AKE/blob/main/figure/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
 </div>
 
-- EEG features
+- <b>EEG features</b>
 
   EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. Frequency domain analysis, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into four frequency bands with two features per band (refer to Table 2. for details). 
 
@@ -81,11 +81,11 @@ There are 17 Eye-tracking features and 8 EEG features were extracted from the da
 </div>
 
 ### 2. AKE data
-- Election-Trec Dataset
+- <b>Election-Trec Dataset</b>
 
   The Election-Trec dataset4 is derived from the open-source dataset TREC2011 track4. The raw data can be visited at: https://trec.nist.gov/data/tweets/. After removing all "#" symbols, it contains 24,210 training tweets and 6,054 testing tweets.
 
-- General-Twitter Dataset
+- <b>General-Twitter Dataset</b>
 
   Developed by (Zhang et al., 2016), employs Hashtags as keyphrases for each tweet. The raw data can be visited at:http://qizhang.info/paper/. It consists of 78,760 training tweets and 33,755 testing tweets, with an average sentence length of about 13 words.
     Meaning of each row of the data:
@@ -103,9 +103,9 @@ First, our system environment is set up according to the following configuration
 
 ## Quick start
 ### Implementation steps for Bi-LSTM based experiments:
-1. Run the processing.py file to process the data into json format:
+1. <b>Processing:</b> Run the processing.py file to process the data into json format:
     `python processing.py` 
-2. Configure hyperparameters in the `config.py` file. There are roughly the following parameters to set:
+2. <b>Configuration:</b> Configure hyperparameters in the `config.py` file. There are roughly the following parameters to set:
     - `modeltype`: select which model to use for training and testing.
     - `train_path`,`test_path`,`vocab_path`,`save_path`: path of train data, test data, vocab data and results.
     - `fs_name`, `fs_num`: Name and number of cognitive traits.
@@ -116,23 +116,23 @@ First, our system environment is set up according to the following configuration
     - `embed_dim`,`hidden_dim`: dim of embedding layer and hidden layer.
     - `batch_size`: refers to the number of examples (or samples) that are processed together in a single forward/backward pass during the training or inference process of a machine learning model.
     - `max_length`: is a parameter that specifies the maximum length (number of tokens) allowed for a sequence of text input. It is often used in natural language processing tasks, such as text generation or text classification.
-3. Modifying combinations of additive cognitive features in the model. For example, the code below means add all 25 features into the model:
+3. <b>Modeling:</b> Modifying combinations of additive cognitive features in the model. For example, the code below means add all 25 features into the model:
     `input = torch.cat([input, inputs['et'], inputs['eeg']], dim=-1)`
-4. based on your system, open the terminal in the root directory 'AKE' and type this command:
+4. <b>Training and testing:</b> based on your system, open the terminal in the root directory 'AKE' and type this command:
     `python main.py` 
 
 ### Implementation steps for Large Language Models(LLMs) based experiments:
-1. BERT: Run `BERT.ipynb` in the `models/` directory:
+1. <b>BERT:</b> Run `BERT.ipynb` in the `models/` directory:
     - Run the code in top-to-bottom order. 
     - Cognitive signals added in the model construction: `outputs = torch.concat((bert_outputs,extra_features[:,:,:]),-1)`.
     - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
     - When testing, the model parameters are read from `models/pretrain_pt`.
-2. T5-Base: Run `T5.ipynb` in the `models/` directory:
+2. <b>T5-Base:</b> Run `T5.ipynb` in the `models/` directory:
     - Set parameter weight = 't5-base'.
     - Cognitive signals are added in the `model construction` part: `outputs = torch.concat((T5_outputs,extra_features[:,:,:]),-1)`. 
     - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
     - When testing, the model parameters are read from `models/pretrain_pt`.
-3. T5-Large: Run `T5.ipynb` in the `models/` directory:
+3. <b>T5-Large:</b> Run `T5.ipynb` in the `models/` directory:
     - Unlike t5-Base, set parameter weight = 't5-large'.
     - Other steps are similar to the above.
   
