@@ -58,7 +58,7 @@ def bl():
     trainLoader = DataLoader(dataset=TextDataSet(train_path, vocab_path, max_length, tag2ids), batch_size=batch_size)
     testLoader = DataLoader(TextDataSet(test_path, vocab_path, max_length, tag2ids), batch_size=batch_size)
 
-    # Deefine the model
+    # Define the model
     model = BiLSTM(vocab_size=vocab_size,
                        embed_dim=embed_dim,
                        hidden_dim=hidden_dim).to(device)
@@ -67,11 +67,12 @@ def bl():
     criterion = nn.CrossEntropyLoss()
     criterion = criterion.to(device)
 
-    # Train the model
     best_P, best_R, best_F = 0.0, 0.0, 0.0
     best_epoch, train_loss = 0, 10
     for epoch in range(epochs):
         print("epoch "+ str(epoch + 1) + " is starting!")
+
+        # Train the model
         model.train()
         avg_loss,target = [],[]
         with tqdm(trainLoader) as pbar_train:
