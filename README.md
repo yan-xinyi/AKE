@@ -59,7 +59,8 @@ We release our all train and test data in "dataset" directory, In the dataset be
 
 There are 17 Eye-tracking features and 8 EEG features were extracted from the dataset:
 1. Eye-tracking features: In ZUCO Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features,encompassing all gaze behavior stages and contextual influences. Early-Stage Features reflect readers' initial comprehension and cognitive processing of the text, while Late-Stage Features indicate readers' syntactic and semantic comprehension. Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
-<img src="https://github.com/yan-xinyi/AKE/figure/ET_features.png" width="200" height="500" alt="Table 1. Summary of Eye-Tracking Features"><br/>
+
+<img src="https://github.com/yan-xinyi/AKE/blob/main/figure/ET_features.png" width="100px" alt="Table 1. Summary of Eye-Tracking Features"><br/>
 3. EEG features: EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. Frequency domain analysis, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into four frequency bands with two features per band (refer to Table 2. for details). 
 ![image](./figure/EEG_features.png)
 ### AKE data
