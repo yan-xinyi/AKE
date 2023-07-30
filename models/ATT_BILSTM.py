@@ -18,9 +18,9 @@ from torch import nn, optim
 from torch.nn import init
 import torch.nn.functional as F
 from tqdm import tqdm
-from utils import *
-from config import *
-from evaluate import *
+from ..utils import *
+from ..config import *
+from ..evaluate import *
 from torch.utils.data import DataLoader
 
 
