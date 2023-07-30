@@ -54,18 +54,18 @@ The results verified the enhancement of cognitive signals genarated during human
 ## Dataset discription
 In our study, two kinds of data are used: the cognitive signal data from human readings behaviors and the AKE from Microblogs data.
 ### 1. cognitive signal data -- Zuco Dataset
-In this study, we choose the Zurich Cognitive Language Processing Corpus (ZUCO), which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. Only data from the normal reading mode were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus.
-We release our all train and test data in "dataset" directory, In the dataset below, cognitive features have been spliced between each word and the corresponding label. Meaning of each column of dataset:
-    - Column 1: words
-    - Columns 2 to 18: word-level eye-tracking signals
-    - Columns 19 to 26: word-level EEG signals
-    - Column 27: labels
+In this study, we choose <b>the Zurich Cognitive Language Processing Corpus (ZUCO)</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
 
-There are 17 Eye-tracking features and 8 EEG features were extracted from the dataset:
+Only data from <b>the normal reading mode</b> were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus. We release our all train and test data in “dataset” directory, In the Zuco dataset, cognitive features have been spliced between each word and the corresponding label. 
+
+Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b> were extracted from the dataset:
 
 - <b>Eye-tracking features</b>
 
-  In ZUCO Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features,encompassing all gaze behavior stages and contextual influences. Early-Stage Features reflect readers' initial comprehension and cognitive processing of the text, while Late-Stage Features indicate readers' syntactic and semantic comprehension. Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
+  In ZUCO Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features, encompassing all gaze behavior stages and contextual influences.
+    - Early-Stage Features reflect readers' initial comprehension and cognitive processing of the text.
+    - Late-Stage Features indicate readers' syntactic and semantic comprehension.
+    - Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
 
 <div align=center>
 <img src="https://github.com/yan-xinyi/AKE/blob/main/figure/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
@@ -73,7 +73,7 @@ There are 17 Eye-tracking features and 8 EEG features were extracted from the da
 
 - <b>EEG features</b>
 
-  EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. Frequency domain analysis, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into four frequency bands with two features per band (refer to Table 2. for details). 
+  EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. <b>Frequency domain analysis</b>, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into <b>four frequency bands</b> with two features per band (refer to Table 2. for details). 
 
 
 <div align=center>
@@ -88,8 +88,7 @@ There are 17 Eye-tracking features and 8 EEG features were extracted from the da
 - <b>General-Twitter Dataset</b>
 
   Developed by (Zhang et al., 2016), employs Hashtags as keyphrases for each tweet. The raw data can be visited at:http://qizhang.info/paper/. It consists of 78,760 training tweets and 33,755 testing tweets, with an average sentence length of about 13 words.
-    Meaning of each row of the data:
-    - Empty lines indicate a sentence break, and one consecutive paragraph represents a sentence.
+  Empty lines indicate a sentence break, and one consecutive paragraph represents a sentence.
 
 ## Requirements
 First, our system environment is set up according to the following configuration:
@@ -104,7 +103,10 @@ First, our system environment is set up according to the following configuration
 ## Quick start
 ### Implementation steps for Bi-LSTM based experiments:
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
-    `python processing.py` 
+    `python processing.py`
+
+   The data is preprocessed to get a format like: {['word','Value_et1',... ,'Value_et17','Value_eeg1',... ,'Value_eeg8','tag']}
+
 2. <b>Configuration:</b> Configure hyperparameters in the `config.py` file. There are roughly the following parameters to set:
     - `modeltype`: select which model to use for training and testing.
     - `train_path`,`test_path`,`vocab_path`,`save_path`: path of train data, test data, vocab data and results.
@@ -116,9 +118,12 @@ First, our system environment is set up according to the following configuration
     - `embed_dim`,`hidden_dim`: dim of embedding layer and hidden layer.
     - `batch_size`: refers to the number of examples (or samples) that are processed together in a single forward/backward pass during the training or inference process of a machine learning model.
     - `max_length`: is a parameter that specifies the maximum length (number of tokens) allowed for a sequence of text input. It is often used in natural language processing tasks, such as text generation or text classification.
-3. <b>Modeling:</b> Modifying combinations of additive cognitive features in the model. For example, the code below means add all 25 features into the model:
-    `input = torch.cat([input, inputs['et'], inputs['eeg']], dim=-1)`
-4. <b>Training and testing:</b> based on your system, open the terminal in the root directory 'AKE' and type this command:
+3. <b>Modeling:</b> Modifying combinations of additive cognitive features in the model.
+
+   For example, the code below means add all 25 features into the model:
+
+         `input = torch.cat([input, inputs['et'], inputs['eeg']], dim=-1)`
+5. <b>Training and testing:</b> based on your system, open the terminal in the root directory 'AKE' and type this command:
     `python main.py` 
 
 ### Implementation steps for Large Language Models(LLMs) based experiments:
