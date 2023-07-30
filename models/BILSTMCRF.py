@@ -70,18 +70,19 @@ def blcrf():
     trainLoader = DataLoader(dataset=TextDataSet(train_path, vocab_path, max_length, tag2ids), batch_size=batch_size)
     testLoader = DataLoader(TextDataSet(test_path, vocab_path, max_length, tag2ids), batch_size=batch_size)
 
-    # Deefine the model
+    # Define the model
     model = BiLSTM_CRF(vocab_size=vocab_size,
                        embed_dim=embed_dim,
                        hidden_dim=hidden_dim,).to(device)
-    # Deefine the optimizer
+    # Define the optimizer
     optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
-    # Train the model
     best_P, best_R, best_F = 0.0, 0.0, 0.0
     best_epoch, best_loss = 0, 10
     for epoch in range(epochs):
         print("epoch " + str(epoch + 1) + " is starting!")
+
+        # Train the model
         model.train()
         avg_loss = []
         with tqdm(trainLoader) as pbar_train:
