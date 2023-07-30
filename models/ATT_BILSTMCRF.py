@@ -167,6 +167,4 @@ def att_blcrf():
         logging.info("R is :" + R_str)
         logging.info("F is :" + F_str)
 
-    logging.info("best epoch is :" + str(best_epoch))
-
     return best_P, best_R, best_F, best_epoch
