@@ -13,39 +13,38 @@ Nowadays, Automatic Keyphrase Extraction (AKE) with single eye-tracking source i
 The results verified the enhancement of cognitive signals genarated during human reading on AKE. EEG signals exhibit the most significant improvement, while the combined results showed no further enhancement. T5-Large model can maximize the performance of the model without weakening the cognitive signals’ weights.
 
 ## Directory structure
-```Root Directory
-AKE
-├── dataset
-│   ├── Zuco
+```
+AKE                                          Root directory
+├── dataset                                  Experimental datasets
+│   ├── Zuco                                 Cognitive datasets
 │   │    ├── test
 │   │    └── train
-│   ├── Election-Trec
+│   ├── Election-Trec                        AKE datasets
 │   │    ├── test
 │   │    └── train
-│   └── General-Twitter
+│   └── General-Twitter                      AKE datasets
 │        ├── test
 │        └── train
-├── models
-│   ├── pretrain_pt
+├── models                                   Module of the deep learning models and pre-trained models
+│   ├── pretrain_pt                          Path to store pre-trained model parameters
 │   │    ├── bert.pt
 │   │    └── t5.pt
-│   ├── BILSTM.py
-│   ├── ATT-BILSTM.py
-│   ├── ATT-BILSTM.py
-│   ├── ATT-BILSTM+CRF.py
-│   ├── SATT-BILSTM.py
-│   ├── SATT-BILSTM+CRF.py
-│   ├── SATT-BILSTM+CRF+GloVe.py
-│   ├── BERT.ipynb
-│   └── T5.ipynb
-├── result
+│   ├── BILSTM.py                            Baseline model
+│   ├── ATT-BILSTM.py                        soft attention based Bi-LSTM
+│   ├── SATT-BILSTM.py                       self-attention based Bi-LSTM
+│   ├── ATT-BILSTM+CRF.py                    soft attention based Bi-LSTM+CRF
+│   ├── SATT-BILSTM+CRF.py                   self-attention based Bi-LSTM+CRF
+│   ├── SATT-BILSTM+CRF+GloVe.py             Improved model 1
+│   ├── BERT.ipynb                           Improved model 2
+│   └── T5.ipynb                             Improved model 3
+├── result                                   Path to store the results
 │   ├── Election-Trec
 │   └── General-Twitter
-├── config.py
-├── utils.py
-├── evaluate.py
-├── processing.py
-└── main.py
+├── config.py                                Path configuration file
+├── utils.py                                 Some auxiliary functions
+├── evaluate.py                              Surce code for result evaluation
+├── processing.py                            Source code of preprocessing function
+└── main.py                                  Surce code for main function
 ```
 
 ## Dataset discription
