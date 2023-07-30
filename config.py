@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2023/4/12 11:25
-# @Author  : Yan Janet
-import torch
+# @Time    : 2023/7/30 11:25
+# @Author  : Xinyi Yan
 
+'''This python file is mainly used for hyperparameter setting. As shown in the following parameter items, it mainly includes:
+   1* Mapping Features
+   2* Data Path
+   3* Training Parameters
+   4* Models Parameters
+'''
+import torch
 # Mapping
 tag2ids = {'[PAD]': 0,'B': 1, 'I': 2, 'E': 3,'S': 4,"O": 5}
 num_tag=6
@@ -11,12 +17,12 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 # data path
-# train_path = './datas/Election-Trec/train.json'
-# test_path = './datas/Election-Trec/test.json'
-# vocab_path = './datas/Election-Trec/vocab.json'
-train_path = './datas/General-Twitter/train.json'
-test_path = './datas/General-Twitter/test.json'
-vocab_path = './datas/General-Twitter/vocab.json'
+# train_path = './dataset/ET-train.json'
+# test_path = './dataset/ET-test.json'
+# vocab_path = './dataset/ET-vocab.json'
+train_path = './dataset/GT-train.json'
+test_path = './dataset/GT-test.json'
+vocab_path = './dataset/GT-vocab.json'
 save_path = 'result/General-Twitter/'
 glove_path = './datas/glove.6B.100d.txt'
 word2vecFile = './datas/word2vec.6B.100d.txt'
@@ -32,10 +38,11 @@ embed_dim = 128
 hidden_dim = 256
 batch_size = 64
 max_length = 64
-vocab_size = 85535             # or 37347
+vocab_size = 85535                           # or 37347
 dropout_value = 0.5
 
-# Choos the Model
+# Models
+## Choos the Model
 '''
     Modify the value of model_type to select a model
     1: BiLSTM,    2: BiLSTM+CRF,    3:att-BiLSTM,    4: satt-BiLSTM, 
