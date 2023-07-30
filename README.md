@@ -16,6 +16,9 @@ The results verified the enhancement of cognitive signals genarated during human
 ```Root Directory
 AKE
 ├── dataset
+│   ├── Zuco
+│   │    ├── test
+│   │    └── train
 │   ├── Election-Trec
 │   │    ├── test
 │   │    └── train
