@@ -99,10 +99,11 @@ def att_bl():
     # Deefine the optimizer
     optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
-    # Train the model
     best_P ,best_R ,best_F ,best_epoch= 0.0, 0.0, 0.0, 0
     for epoch in range(epochs):
         print("epoch "+ str(epoch + 1) + " is starting!")
+        
+        # Train the model
         model.train()
         avg_loss = []
         with tqdm(trainLoader) as pbar_train:
