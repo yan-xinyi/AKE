@@ -92,11 +92,11 @@ def att_bl():
     trainLoader = DataLoader(dataset=TextDataSet(train_path, vocab_path, max_length, tag2ids), batch_size=batch_size)
     testLoader = DataLoader(TextDataSet(test_path, vocab_path, max_length, tag2ids), batch_size=batch_size)
 
-    # Deefine the model
+    # Define the model
     model = ATTBiLSTM(vocab_size=vocab_size,
                        embed_dim=embed_dim,
                        hidden_dim=hidden_dim).to(device)
-    # Deefine the optimizer
+    # Define the optimizer
     optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
     best_P ,best_R ,best_F ,best_epoch= 0.0, 0.0, 0.0, 0
