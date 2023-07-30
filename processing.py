@@ -661,7 +661,7 @@ def main():
     zuco_train_path = 'dataset/Zuco/train'                      # Raw file path to the ZUCO training set for the cognitive processing corpus
     zuco_test_path = 'dataset/Zuco/test'                        # Raw file path to the ZUCO testing set for the cognitive processing corpus
     tweet_train_path = 'datset/General-Twitter/train'           # Raw file path to the Tweets training set for the AKE corpus
-    tweet_test_path = 'datset/General-Twitter/test'            # Raw file path to the Tweets testing set for the AKE corpus
+    tweet_test_path = 'datset/General-Twitter/test'             # Raw file path to the Tweets testing set for the AKE corpus
     save_train_path = 'datset/General-Twitter/train_im'         # Path to store intermediate training files for adding cognitive features
     save_test_path = 'datset/General-Twitter/test_im'           # Path to store intermediate testing files for adding cognitive features
     train_path = 'datset/GT-train.json'                         # Storing the final AKE training corpus containing cognitive features
