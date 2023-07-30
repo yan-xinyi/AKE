@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2023/7/30 11:25
+# @Author  : Xinyi Yan
+
+'''
+   This file is mainly used to extract cognitive signals from the Zuco dataset and merge them into the AKE dataset. 
+   To run this file, please run main() directly.
+'''
+
+
 import re
 import os
 import nltk
@@ -6,11 +16,6 @@ import codecs
 from tqdm import tqdm
 import pandas as pd
 from nltk.tag import pos_tag
-
-'''
-   This file is mainly used to extract cognitive signals from the Zuco dataset and merge them into the AKE dataset. 
-   To run this file, please run main() directly.
-'''
 
 # Replace every digit in a string by a zero.
 def zero_digits(s):
