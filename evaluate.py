@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2023/7/30 11:25
+# @Author  : Xinyi Yan
+'''
+   This file is mainly used to calculate the P, R, and F1 values of AKE in terms of keyphrases.
+      def read_json_datas(path): mainly for reading json file.
+      def evaluate(predict_data, target_data, topk=2): mainly for calculating the P, R and F1 values of the extraction datas.
+'''
+
 import os
 import json
 
@@ -12,7 +21,7 @@ def read_json_datas(path):
 
 
 # Calculate the P, R and F1 values of the extraction datas
-def evaluate(predict_data, target_data, topk=2):
+def evaluate(predict_data, target_data, topk=3):
 
     TRUE_COUNT, PRED_COUNT, GOLD_COUNT  =  0.0, 0.0, 0.0
     for index, words in enumerate(predict_data):
