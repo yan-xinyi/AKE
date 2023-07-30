@@ -2,7 +2,8 @@
 # @Time    : 2023/7/30 11:25
 # @Author  : Xinyi Yan
 
-'''This python file is mainly used for hyperparameter setting. As shown in the following parameter items, it mainly includes:
+'''
+This python file is mainly used for hyperparameter setting. As shown in the following parameter items, it mainly includes:
    1* Mapping Features
    2* Data Path
    3* Training Parameters
