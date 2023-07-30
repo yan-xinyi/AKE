@@ -49,7 +49,7 @@ The results verified the enhancement of cognitive signals genarated during human
 ├── processing.py                            Source code of preprocessing function
 ├── main.py                                  Surce code for main function
 └─README.md
-<pre>
+</pre>
 
 ## Dataset discription
 In our study, two kinds of data are used: the cognitive signal data from human readings behaviors and the AKE from Microblogs data.
