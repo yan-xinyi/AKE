@@ -79,7 +79,6 @@ Table 1. Summary of Eye-Tracking Features
 Table 2. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="700px" alt="Table 2. Summary of Eye-Tracking Features">
 </div>
-
 ### 2. AKE data
 - <b>Election-Trec Dataset</b>
 
