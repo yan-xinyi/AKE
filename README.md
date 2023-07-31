@@ -9,7 +9,7 @@ Nowadays, <b>Automatic Keyphrase Extraction (AKE)</b> with single eye-tracking s
 Our work includes the followig aspects:
 
   1. <b>We applied different types of cognitive signals generated during human reading to AKE from Microblogs for the first time.</b> 
-  Specifically, we combine EEG signals and Eye-tracking signals jointly to AKE based on the open-source cognitive language processing corpus Zuco. 
+  Specifically, we combine EEG signals and Eye-tracking signals jointly to AKE based on the open-source cognitive language processing corpus ZUCO. 
   2. We compared the effects of <b>different frequency bands of EEG signals</b>  on the performance of the AKE. 
   3. Furthermore, we evaluated AKE by <b>combining the most effective EEG signals and eye-tracking signals from single-source cognitive signal tests</b> .
   4. Analyzing the unsatisfactory results of the previous experiments, we <b>improved the AKE model based on Pretrained Language Models (PLMs)</b> : First, we incorporate Glove embeddings into the input layer of the SATT-BiLSTM+CRF model, which exhibited the best AKE test performance. Second, we propose an improved AKE based on BERT. Lastly, we implemented an improved AKE based on the T5 (including T5-Base and T5-Large). 
@@ -19,7 +19,7 @@ The results verified the enhancement of cognitive signals genarated during human
 ## Directory structure
 <pre>AKE                                          Root directory
 ├── dataset                                  Experimental datasets
-│   ├── Zuco                                 Cognitive datasets
+│   ├── ZUCO                                 Cognitive datasets
 │   │    ├── test
 │   │    └── train
 │   └── Microblogs                           Microblogs based AKE datasets
@@ -54,29 +54,31 @@ The results verified the enhancement of cognitive signals genarated during human
 
 ## Dataset discription
 In our study, two kinds of data are used: the cognitive signal data from human readings behaviors and the AKE from Microblogs data.
-### 1. cognitive signal data -- Zuco Dataset
-In this study, we choose <b>the Zurich Cognitive Language Processing Corpus (Zuco)</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
+### 1. cognitive signal data -- ZUCO Dataset
+In this study, we choose <b>the Zurich Cognitive Language Processing Corpus (ZUCO)</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
 
-Only data from <b>the normal reading mode</b> were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus. We release our all train and test data in “dataset” directory, In the Zuco dataset, cognitive features have been spliced between each word and the corresponding label. 
+Only data from <b>the normal reading mode</b> were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus. We release our all train and test data in “dataset” directory, In the ZUCO dataset, cognitive features have been spliced between each word and the corresponding label. 
 
 Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b> were extracted from the dataset:
 
 - <b>Eye-tracking features</b>
-
-  In Zuco Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features, encompassing all gaze behavior stages and contextual influences.
+  In ZUCO Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features, encompassing all gaze behavior stages and contextual influences.
     - Early-Stage Features reflect readers' initial comprehension and cognitive processing of the text.
     - Late-Stage Features indicate readers' syntactic and semantic comprehension.
     - Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
 
+<div align=center>
 Table 1. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
+</div>
 
 - <b>EEG features</b>
-
   EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. <b>Frequency domain analysis</b>, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into <b>four frequency bands</b> with two features per band (refer to Table 2. for details).
-  
+
+<div align=center>
 Table 2. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="700px" alt="Table 2. Summary of Eye-Tracking Features">
+</div>
 
 ### 2. AKE data
 - <b>Election-Trec Dataset</b>
