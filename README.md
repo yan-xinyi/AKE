@@ -68,20 +68,15 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
     - Late-Stage Features indicate readers' syntactic and semantic comprehension.
     - Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
 
-<div align=center>
 Table 1. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
-</div>
 
 - <b>EEG features</b>
 
-  EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. <b>Frequency domain analysis</b>, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into <b>four frequency bands</b> with two features per band (refer to Table 2. for details). 
-
-
-<div align=center>
+  EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. <b>Frequency domain analysis</b>, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into <b>four frequency bands</b> with two features per band (refer to Table 2. for details).
+  
 Table 2. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="700px" alt="Table 2. Summary of Eye-Tracking Features">
-</div>
 
 ### 2. AKE data
 - <b>Election-Trec Dataset</b>
