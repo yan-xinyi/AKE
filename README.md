@@ -129,18 +129,17 @@ First, our system environment is set up according to the following configuration
 
 ### Implementation steps for Large Language Models(LLMs) based experiments:
 1. <b>BERT:</b> Run `BERT.ipynb` in the `models/` directory:
-    - Run the code in top-to-bottom order. 
-    - Cognitive signals added in the model construction: `outputs = torch.concat((bert_outputs,extra_features[:,:,:]),-1)`.
-    - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
-    - When testing, the model parameters are read from `models/pretrain_pt`.
+     - Cognitive signals added in the model construction: `outputs = torch.concat((bert_outputs,extra_features[:,:,:]),-1)`.
+     - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
+     - When testing, the model parameters are read from `models/pretrain_pt`.
 2. <b>T5-Base:</b> Run `T5.ipynb` in the `models/` directory:
-    - Set parameter weight = 't5-base'.
-    - Cognitive signals are added in the `model construction` part: `outputs = torch.concat((T5_outputs,extra_features[:,:,:]),-1)`. 
-    - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
-    - When testing, the model parameters are read from `models/pretrain_pt`.
+     - Set parameter weight = 't5-base'.
+     - Cognitive signals are added in the `model construction` part: `outputs = torch.concat((T5_outputs,extra_features[:,:,:]),-1)`. 
+     - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
+     - When testing, the model parameters are read from `models/pretrain_pt`.
 3. <b>T5-Large:</b> Run `T5.ipynb` in the `models/` directory:
-    - Unlike t5-Base, set parameter weight = 't5-large'.
-    - Other steps are similar to the above.
+     - Unlike t5-Base, set parameter weight = 't5-large'.
+     - Other steps are similar to the above.
   
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
