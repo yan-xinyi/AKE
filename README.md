@@ -88,7 +88,7 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
 
 - <b>General-Twitter Dataset</b>
 
-  Developed by (Zhang et al., 2016), employs Hashtags as keyphrases for each tweet. The raw data can be visited at:http://qizhang.info/paper/. It consists of 78,760 training tweets and 33,755 testing tweets, with an average sentence length of about 13 words.
+  Developed by (Zhang et al., 2016), employs Hashtags as keyphrases for each tweet. The raw data can be visited at: https://github.com/lyl2000/KE/tree/master/data/original_data/. It consists of 78,760 training tweets and 33,755 testing tweets, with an average sentence length of about 13 words.
   Empty lines indicate a sentence break, and one consecutive paragraph represents a sentence.
 
 ## Requirements
