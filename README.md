@@ -106,7 +106,7 @@ First, our system environment is set up according to the following configuration
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
     `python processing.py`
 
-   The data is preprocessed to get a format like: {['word','Value_et1',... ,'Value_et17','Value_eeg1',... ,'Value_eeg8','tag']}
+   The data is preprocessed to the format like: {['word','Value_et1',... ,'Value_et17','Value_eeg1',... ,'Value_eeg8','tag']}
 
 2. <b>Configuration:</b> Configure hyperparameters in the `config.py` file. There are roughly the following parameters to set:
     - `modeltype`: select which model to use for training and testing.
