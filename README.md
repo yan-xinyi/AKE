@@ -9,7 +9,7 @@ Nowadays, <b>Automatic Keyphrase Extraction (AKE)</b> with single eye-tracking s
 Our work includes the followig aspects:
 
   1. <b>We applied different types of cognitive signals generated during human reading to AKE from Microblogs for the first time.</b> 
-  Specifically, we combine EEG signals and Eye-tracking signals jointly to AKE based on the open-source cognitive language processing corpus ZUCO. 
+  Specifically, we combine EEG signals and Eye-tracking signals jointly to AKE based on the open-source cognitive language processing corpus Zuco. 
   2. We compared the effects of <b>different frequency bands of EEG signals</b>  on the performance of the AKE. 
   3. Furthermore, we evaluated AKE by <b>combining the most effective EEG signals and eye-tracking signals from single-source cognitive signal tests</b> .
   4. Analyzing the unsatisfactory results of the previous experiments, we <b>improved the AKE model based on Pretrained Language Models (PLMs)</b> : First, we incorporate Glove embeddings into the input layer of the SATT-BiLSTM+CRF model, which exhibited the best AKE test performance. Second, we propose an improved AKE based on BERT. Lastly, we implemented an improved AKE based on the T5 (including T5-Base and T5-Large). 
@@ -22,12 +22,13 @@ The results verified the enhancement of cognitive signals genarated during human
 │   ├── Zuco                                 Cognitive datasets
 │   │    ├── test
 │   │    └── train
-│   ├── Election-Trec                        AKE datasets
-│   │    ├── test
-│   │    └── train
-│   └── General-Twitter                      AKE datasets
-│        ├── test
-│        └── train
+│   └── Microblogs                           Microblogs based AKE datasets
+│        ├── Election-Trec                   Election-Trec AKE Dataset
+│        │     ├── test
+│        │     └── train
+│        └── General-Twitter                 General-Twitter AKE Dataset                 
+│              ├── test
+│              └── train
 ├── models                                   Module of the deep learning models and pre-trained models
 │   ├── pretrain_pt                          Path to store pre-trained model parameters
 │   │    ├── bert.pt
@@ -37,9 +38,9 @@ The results verified the enhancement of cognitive signals genarated during human
 │   ├── SATT-BILSTM.py                       self-attention based Bi-LSTM
 │   ├── ATT-BILSTM+CRF.py                    soft attention based Bi-LSTM+CRF
 │   ├── SATT-BILSTM+CRF.py                   self-attention based Bi-LSTM+CRF
-│   ├── SATT-BILSTM+CRF+GloVe.py             Improved model 1
-│   ├── BERT.ipynb                           Improved model 2
-│   └── T5.ipynb                             Improved model 3
+│   ├── SATT-BILSTM+CRF+GloVe.py             Improved model with GloVe Embeddings
+│   ├── BERT.ipynb                           Improved model based on BERT model
+│   └── T5.ipynb                             Improved model based on T5 model 
 ├── result                                   Path to store the results
 │   ├── Election-Trec
 │   └── General-Twitter
@@ -54,7 +55,7 @@ The results verified the enhancement of cognitive signals genarated during human
 ## Dataset discription
 In our study, two kinds of data are used: the cognitive signal data from human readings behaviors and the AKE from Microblogs data.
 ### 1. cognitive signal data -- Zuco Dataset
-In this study, we choose <b>the Zurich Cognitive Language Processing Corpus (ZUCO)</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
+In this study, we choose <b>the Zurich Cognitive Language Processing Corpus (Zuco)</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
 
 Only data from <b>the normal reading mode</b> were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus. We release our all train and test data in “dataset” directory, In the Zuco dataset, cognitive features have been spliced between each word and the corresponding label. 
 
@@ -62,13 +63,13 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
 
 - <b>Eye-tracking features</b>
 
-  In ZUCO Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features, encompassing all gaze behavior stages and contextual influences.
+  In Zuco Corpus, Hollenstein et al.(2019) categorized the 17 eye-tracking features into three groups(Refer to Table 1): Early-Stage Features,Late-Stage Features and Contextual Features, encompassing all gaze behavior stages and contextual influences.
     - Early-Stage Features reflect readers' initial comprehension and cognitive processing of the text.
     - Late-Stage Features indicate readers' syntactic and semantic comprehension.
     - Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
 
 <div align=center>
-<img src="https://github.com/yan-xinyi/AKE/blob/main/figure/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
+<img src="https://github.com/yan-xinyi/yan-xinyi.github.io/blob/main/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
 </div>
 
 - <b>EEG features</b>
@@ -77,7 +78,7 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
 
 
 <div align=center>
-<img src="https://github.com/yan-xinyi/AKE/blob/main/figure/EEG_features.png" width="700px" alt="Table 1. Summary of Eye-Tracking Features">
+<img src="https://github.com/yan-xinyi/yan-xinyi.github.io/blob/main/figures/EEG_features.png" width="700px" alt="Table 1. Summary of Eye-Tracking Features">
 </div>
 
 ### 2. AKE data
