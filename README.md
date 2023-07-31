@@ -69,6 +69,7 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
     - Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
 
 <div align=center>
+Table 1. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
 </div>
 
@@ -78,6 +79,7 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
 
 
 <div align=center>
+Table 2. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="700px" alt="Table 2. Summary of Eye-Tracking Features">
 </div>
 
