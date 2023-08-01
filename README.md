@@ -69,7 +69,7 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
 
 
 <div align=center>
-Table 1. Summary of Eye-Tracking Features
+Table 1. Summary of Eye-Tracking Features<br>
   
 <img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
 </div>
@@ -79,7 +79,7 @@ Table 1. Summary of Eye-Tracking Features
 
 
 <div align=center> 
-Table 2. Summary of EEG Features
+Table 2. Summary of EEG Features<br>
   
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="450px" alt="Table 2. Summary of EEG Features">
 </div>
