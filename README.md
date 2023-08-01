@@ -68,16 +68,18 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
     - Contextual Features refer to the gaze behavior of readers on the words surrounding the current word.
 
 <div align=center>
-Table 1. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
+
+Table 1. Summary of Eye-Tracking Features
 </div>
 
 - <b>EEG features</b>
   EEG is a bio-electrical signal measurement used to assess brain activity by detecting electrical potential changes in brain neurons through multiple scalp electrodes. <b>Frequency domain analysis</b>, or spectral analysis, is a widely utilized EEG analysis method in various scientific disciplines. The recorded EEG signals used a 128-channel neural signal acquisition system, categorized into <b>four frequency bands</b> with two features per band (refer to Table 2. for details).
 
 <div align=center>
-Table 2. Summary of Eye-Tracking Features
-<img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="400px" alt="Table 2. Summary of Eye-Tracking Features">
+<img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="450px" alt="Table 2. Summary of EEG Features">
+
+Table 2. Summary of EEG Features
 </div>
 
 ### 2. AKE Dataset
@@ -144,8 +146,9 @@ System environment is set up according to the following configuration:
 We randomly selected five instances from the Election-Trec dataset and the General-Twitter dataset to visually illustrate the impact of cognitive signals generated during human reading on AKE from Microblogs. 
 
 <div align=center>
+<img src="https://yan-xinyi.github.io/figures/Case Study.png" width="800px" alt="Table 8. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
+
 Table 8. Example of AKE incorporating Cognitive Signals Generated during Human Reading
-<img src="https://yan-xinyi.github.io/figures/Case Study.png" width="1000px" alt="Table 8. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
 </div>
 
 Note: Bold italicized mark indicate manually annotated correct Hashtags, blue mark represent correctly predicted keyphrases, green mark indicate predicted incorrect results, yellow mark represent partially predicted words for the target answers.
