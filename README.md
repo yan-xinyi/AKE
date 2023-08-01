@@ -152,10 +152,10 @@ We randomly selected five instances from the Election-Trec dataset and the Gener
 Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading<br>
   
 <img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
+</div>
 
+<div align=center>
 <b>Note</b>: Bold italicize mark indicates manually annotated correct Hashtags, blue mark represents correctly predicted keyphrases, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
-
-
 </div>
 
 ## Citation
