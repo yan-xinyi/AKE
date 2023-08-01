@@ -143,7 +143,7 @@ System environment is set up according to the following configuration:
      - Other steps are similar to the above.
   
 ## Case Study
-We randomly selected five instances from the Election-Trec dataset and the General-Twitter dataset to visually illustrate the impact of cognitive signals generated during human reading on AKE from Microblogs （refer to Table 3 for details).
+We randomly selected five instances from the Election-Trec dataset and the General-Twitter dataset to visually illustrate the impact of cognitive signals generated during human reading on AKE from Microblogs (refer to Table 3 for details).
 
 <div align=center>
 <img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
