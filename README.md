@@ -101,7 +101,7 @@ System environment is set up according to the following configuration:
 - Tqdm==4.56.0
 
 ## Quick Start
-### Implementation steps for Bi-LSTM based experiments:
+### Implementation Steps for Bi-LSTM-based AKE
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
     `python processing.py`
 
@@ -126,7 +126,7 @@ System environment is set up according to the following configuration:
 5. <b>Training and testing:</b> based on your system, open the terminal in the root directory 'AKE' and type this command:
     `python main.py` 
 
-### Implementation steps for Large Language Models(LLMs) based experiments:
+### Implementation Steps for Large Language Models(LLMs)-based AKE
 1. <b>BERT:</b> Run `BERT.ipynb` in the `models/` directory:
      - Cognitive signals added in the model construction: `outputs = torch.concat((bert_outputs,extra_features[:,:,:]),-1)`.
      - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
