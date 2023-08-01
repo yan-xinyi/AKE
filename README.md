@@ -55,7 +55,7 @@ The results verified the enhancement of cognitive signals genarated during human
 ## Dataset Discription
 In our study, two kinds of data are used: the cognitive signal data from human readings behaviors and the AKE from Microblogs data.
 ### 1. Cognitive Signal Data -- ZUCO Dataset
-In this study, we choose <b>the Zurich Cognitive Language Processing Corpus (ZUCO)</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
+In this study, we choose <b>the Zurich Cognitive Language Processing Corpus ([ZUCO](https://www.nature.com/articles/sdata2018291))</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
 
 Only data from <b>the normal reading mode</b> were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus. We release our all train and test data in “dataset” directory, In the ZUCO dataset, cognitive features have been spliced between each word and the corresponding label. 
 
