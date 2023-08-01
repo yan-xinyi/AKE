@@ -146,15 +146,12 @@ System environment is set up according to the following configuration:
 We randomly selected five instances from the Election-Trec dataset and the General-Twitter dataset to visually illustrate the impact of cognitive signals generated during human reading on AKE from Microblogs (refer to Table 3 for details).
 
 <div align=center>
-<img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
-
 Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading
+<img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
+***Note***: Bold italicized mark indicate manually annotated correct Hashtags, blue mark represent correctly predicted keyphrases, green mark indicate predicted incorrect results, yellow mark represent partially predicted words for the target answers.
+
 </div>
 
-Note: Bold italicized mark indicate manually annotated correct Hashtags, blue mark represent correctly predicted keyphrases, green mark indicate predicted incorrect results, yellow mark represent partially predicted words for the target answers.
-
-
-  
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
     
