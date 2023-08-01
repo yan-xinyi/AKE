@@ -155,7 +155,7 @@ Table 3. Example of AKE incorporating Cognitive Signals Generated during Human R
 </div>
 
 
-<b>Note</b>: Bold italicize mark indicates annotated correct Hashtags in microblog manually , blue mark represents predicted keyphrases correctly, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
+<b>Note</b>: Bold italicize mark indicates annotated correct Hashtags in microblog manually , <span style="color:blue">blue mark</span> represents predicted keyphrases correctly, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
 
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
