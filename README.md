@@ -140,6 +140,18 @@ System environment is set up according to the following configuration:
      - Unlike t5-Base, set parameter weight = 't5-large'.
      - Other steps are similar to the above.
   
+## Case Study
+We randomly selected five instances from the Election-Trec dataset and the General-Twitter dataset to visually illustrate the impact of cognitive signals generated during human reading on AKE from Microblogs. 
+
+<div align=center>
+Table 1. Summary of Eye-Tracking Features
+<img src="https://yan-xinyi.github.io/figures/Case Study.png" width="1000px" alt="able 8. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
+</div>
+
+Note: Bold italicized mark indicate manually annotated correct Hashtags, blue mark represent correctly predicted keyphrases, green mark indicate predicted incorrect results, yellow mark represent partially predicted words for the target answers.
+
+
+  
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
     
