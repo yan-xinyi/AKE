@@ -154,7 +154,7 @@ Table 3. Example of AKE incorporating Cognitive Signals Generated during Human R
 <img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
 </div>
 
-<div align=center>
+<div align=center width="600px">
 <b>Note</b>: Bold italicize mark indicates manually annotated correct Hashtags, blue mark represents correctly predicted keyphrases, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
 </div>
 
