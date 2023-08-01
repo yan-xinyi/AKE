@@ -8,11 +8,11 @@ Nowadays, <b>Automatic Keyphrase Extraction (AKE)</b> with single eye-tracking s
 <b>In this paper, we propose to utilize EEG and eye-tracking signals to enhance AKE from Microblogs. </b>
 Our work includes the followig aspects:
 
-  1. <b>We applied different types of cognitive signals generated during human reading to AKE from Microblogs for the first time.</b> 
+  - We applied different types of cognitive signals generated during human reading to AKE from Microblogs for the first time. 
   Specifically, we combine EEG signals and Eye-tracking signals jointly to AKE based on the open-source cognitive language processing corpus ZUCO. 
-  2. We compared the effects of <b>different frequency bands of EEG signals</b>  on the performance of the AKE. 
-  3. Furthermore, we evaluated AKE by <b>combining the most effective EEG signals and eye-tracking signals from single-source cognitive signal tests</b> .
-  4. Analyzing the unsatisfactory results of the previous experiments, we <b>improved the AKE model based on Pretrained Language Models (PLMs)</b> : First, we incorporate Glove embeddings into the input layer of the SATT-BiLSTM+CRF model, which exhibited the best AKE test performance. Second, we propose an improved AKE based on BERT. Lastly, we implemented an improved AKE based on the T5 (including T5-Base and T5-Large). 
+  - We compared the effects of <b>different frequency bands of EEG signals</b>  on the performance of the AKE. 
+  - Furthermore, we evaluated AKE by combining the most effective EEG signals and eye-tracking signals from single-source cognitive signal tests<  .
+  - Analyzing the unsatisfactory results of the previous experiments, we improved the AKE model based on Pretrained Language Models (PLMs): First, we incorporate Glove embeddings into the input layer of the SATT-BiLSTM+CRF model, which exhibited the best AKE test performance. Second, we propose an improved AKE based on BERT. Lastly, we implemented an improved AKE based on the T5 (including T5-Base and T5-Large). 
 
 The results verified the enhancement of cognitive signals genarated during human reading on AKE. EEG signals exhibit the most significant improvement, while the combined results showed no further enhancement. T5-Large model can maximize the performance of the model without weakening the cognitive signals’ weights.
 
