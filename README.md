@@ -16,7 +16,7 @@ Our work includes the followig aspects:
 
 The results verified the enhancement of cognitive signals genarated during human reading on AKE. EEG signals exhibit the most significant improvement, while the combined results showed no further enhancement. T5-Large model can maximize the performance of the model without weakening the cognitive signals’ weights.
 
-## Directory structure
+## Directory Structure
 <pre>AKE                                          Root directory
 ├── dataset                                  Experimental datasets
 │   ├── ZUCO                                 Cognitive datasets
@@ -52,9 +52,9 @@ The results verified the enhancement of cognitive signals genarated during human
 └─README.md
 </pre>
 
-## Dataset discription
+## Dataset Discription
 In our study, two kinds of data are used: the cognitive signal data from human readings behaviors and the AKE from Microblogs data.
-### 1. cognitive signal data -- ZUCO Dataset
+### 1. Cognitive Signal Data -- ZUCO Dataset
 In this study, we choose <b>the Zurich Cognitive Language Processing Corpus (ZUCO)</b>, which captures eye-tracking signals and EEG signals of 12 adult native speakers reading approximately 1100 English sentences in normal and task reading modes. The raw data can be visited at: https://osf.io/2urht/#!. 
 
 Only data from <b>the normal reading mode</b> were utilized to align with human natural reading habits. The reading corpus includes two datasets: 400 movie reviews from the Stanford Sentiment Treebank and 300 paragraphs about celebrities from the Wikipedia Relation Extraction Corpus. We release our all train and test data in “dataset” directory, In the ZUCO dataset, cognitive features have been spliced between each word and the corresponding label. 
@@ -79,7 +79,8 @@ Table 1. Summary of Eye-Tracking Features
 Table 2. Summary of Eye-Tracking Features
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="700px" alt="Table 2. Summary of Eye-Tracking Features">
 </div>
-### 2. AKE data
+
+### 2. AKE Dataset
 - <b>Election-Trec Dataset</b>
 
   The Election-Trec dataset4 is derived from the open-source dataset TREC2011 track4. The raw data can be visited at: https://trec.nist.gov/data/tweets/. After removing all "#" symbols, it contains 24,210 training tweets and 6,054 testing tweets.
@@ -99,7 +100,7 @@ First, our system environment is set up according to the following configuration
 - nltk==3.6.2
 - Tqdm==4.56.0
 
-## Quick start
+## Quick Start
 ### Implementation steps for Bi-LSTM based experiments:
 1. <b>Processing:</b> Run the processing.py file to process the data into json format:
     `python processing.py`
