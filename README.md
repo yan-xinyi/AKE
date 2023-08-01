@@ -91,7 +91,7 @@ Table 2. Summary of Eye-Tracking Features
   Empty lines indicate a sentence break, and one consecutive paragraph represents a sentence.
 
 ## Requirements
-First, our system environment is set up according to the following configuration:
+System environment is set up according to the following configuration:
 - Python==3.7
 - Torch==1.8.0
 - torchvision==0.9.0
