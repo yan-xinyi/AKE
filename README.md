@@ -80,6 +80,7 @@ Table 1. Summary of Eye-Tracking Features
 Table 2. Summary of EEG Features
   
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="450px" alt="Table 2. Summary of EEG Features">
+
 </div>
 
 ### 2. AKE Dataset
