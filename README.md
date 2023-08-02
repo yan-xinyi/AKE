@@ -69,9 +69,9 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
 
 
 <div align=center>
-Table 1. Summary of Eye-Tracking Features<br>
-  
 <img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
+
+Table 1. Summary of Eye-Tracking Features
 </div>
 
 - <b>EEG features</b>
@@ -79,9 +79,9 @@ Table 1. Summary of Eye-Tracking Features<br>
 
 
 <div align=center> 
-Table 2. Summary of EEG Features<br>
-  
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="450px" alt="Table 2. Summary of EEG Features">
+
+Table 2. Summary of EEG Features
 </div>
 
 
@@ -146,17 +146,20 @@ System environment is set up according to the following configuration:
      - Other steps are similar to the above.
   
 ## Case Study
-We randomly selected five instances from the Election-Trec dataset and the General-Twitter dataset to visually illustrate the impact of cognitive signals generated during human reading on AKE from Microblogs (refer to Table 3 for details).
+We randomly selected five instances from the Election-Trec dataset and the General-Twitter dataset to visually illustrate the impact of cognitive signals generated during human reading on AKE from Microblogs (refer to Table 3 for details). 
+
+In this study, we compared the performance of the AKE under four feature combinations:<b> "-," "EEG," "ET," and "ET&EEG"</b>. "-" indicates the model without using any cognitive processing signals. "EEG" and "ET" represent the model with only EEG signals and only eye-tracking signals, respectively. "ET&EEG" indicates the model that combines both eye-tracking and EEG signals simultaneously.
 
 <div align=center>
-Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading<br>
-  
 <img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
+
+Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading
 </div>
 
 
 <b>Note</b>: Bold italicize mark indicates annotated correct Hashtags in microblog manually , blue mark represents predicted keyphrases correctly, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
 
+In order to compare the evaluation results more intuitively, we used the following scoring criteria: 10 points for correct predictions, 3 points for partially correct predictions, and 0 points for incorrect predictions. The scores for each feature combination were as follows:" - : 12 points, EEG : 86 points, ET : 29 points, and ET&EEG : 53 points". These results clearly indicate that cognitive signals generated during human reading have a positive impact on the AKE from Microblogs. Among them, EEG signals show a stronger enhancement on AKE performance, while eye-tracking signals exhibit a relatively weaker enhancing capability.
 
 
 ## Citation
