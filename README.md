@@ -91,7 +91,7 @@ Table 2. Summary of EEG Features<br>
 
 - <b>General-Twitter Dataset</b>
 
-  Developed by (Zhang et al., 2016), employs Hashtags as keyphrases for each tweet. The raw data can be visited at: https://jkx.fudan.edu.cn/paper/data/keyphrase_dataset.tar.gz. It consists of 78,760 training tweets and 33,755 testing tweets, with an average sentence length of about 13 words.
+  Developed by (Zhang et al., 2016), employs Hashtags as keyphrases for each tweet. The raw data can be visited at: http://qizhang.info/paper/data/keyphrase_dataset.tar.gz. It consists of 78,760 training tweets and 33,755 testing tweets, with an average sentence length of about 13 words.
   Empty lines indicate a sentence break, and one consecutive paragraph represents a sentence.
 
 ## Requirements
