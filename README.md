@@ -149,8 +149,10 @@ We randomly selected five instances from the Election-Trec dataset and the Gener
 
 In this study, we compared the performance of the AKE under four feature combinations:<b> "-," "EEG," "ET," and "ET&EEG"</b>. "-" indicates the model without using any cognitive processing signals. "EEG" and "ET" represent the model with only EEG signals and only eye-tracking signals, respectively. "ET&EEG" indicates the model that combines both eye-tracking and EEG signals simultaneously.
 
-<div align=center> Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading
+<div align=center> 
+Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading <br>
 <img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
+<br>
 <b>Note</b>: Bold italicize mark indicates annotated correct Hashtags in microblog manually , blue mark represents predicted keyphrases correctly, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
 </div>
 
