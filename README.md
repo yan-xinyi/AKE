@@ -79,7 +79,7 @@ Table 1. Summary of Eye-Tracking Features
 
 <div align=center> 
   
-Table 2. Summary of EEG Features
+Table 2. Summary of EEG Features<br>
 <img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="450px" alt="Table 2. Summary of EEG Features">
 </div>
 
@@ -152,9 +152,9 @@ In this study, we compared the performance of the AKE under four feature combina
 <div align=center> 
 Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading <br>
 <img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
-<br>
-<b>Note</b>: Bold italicize mark indicates annotated correct Hashtags in microblog manually , blue mark represents predicted keyphrases correctly, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
+
 </div>
+<br><b>Note</b>: Bold italicize mark indicates annotated correct Hashtags in microblog manually , blue mark represents predicted keyphrases correctly, green mark indicates predicted incorrect results, yellow mark represents partially predicted words for the target answers.
 
 
 
