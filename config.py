@@ -48,6 +48,7 @@ dropout_value = 0.5
     Modify the value of model_type to select a model
     1: BiLSTM,    2: BiLSTM+CRF,    3:att-BiLSTM,    4: satt-BiLSTM, 
     5: att-BiLSTM+CRF,     6: satt-BiLSTM+CRF,       7: satt-BiLSTM+CRF+GloVe
+    8: BERT,               9:T5
 '''
 model_type = 1
 
