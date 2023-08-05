@@ -39,8 +39,8 @@ The results verified the enhancement of cognitive signals genarated during human
 │   ├── ATT-BILSTM+CRF.py                    soft attention based Bi-LSTM+CRF
 │   ├── SATT-BILSTM+CRF.py                   self-attention based Bi-LSTM+CRF
 │   ├── SATT-BILSTM+CRF+GloVe.py             Improved model with GloVe Embeddings
-│   ├── BERT.ipynb                           Improved model based on BERT model
-│   └── T5.ipynb                             Improved model based on T5 model 
+│   ├── BERT.py                              Improved model based on BERT model
+│   └── T5.py                                Improved model based on T5 model 
 ├── result                                   Path to store the results
 │   ├── Election-Trec
 │   └── General-Twitter
@@ -131,16 +131,16 @@ System environment is set up according to the following configuration:
     `python main.py` 
 
 ### Implementation Steps for Large Language Models(LLMs)-based AKE
-1. <b>BERT:</b> Run `BERT.ipynb` in the `models/` directory:
+1. <b>BERT:</b> choose `model_type = 8` to call for the BERT model:
      - Cognitive signals added in the model construction: `outputs = torch.concat((bert_outputs,extra_features[:,:,:]),-1)`.
      - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
      - When testing, the model parameters are read from `models/pretrain_pt`.
-2. <b>T5-Base:</b> Run `T5.ipynb` in the `models/` directory:
+2. <b>T5-Base:</b> choose `model_type = 9` to call for the T5 model:
      - Set parameter weight = 't5-base'.
      - Cognitive signals are added in the `model construction` part: `outputs = torch.concat((T5_outputs,extra_features[:,:,:]),-1)`. 
      - Set epoch to 5 and train the model. Save the model parameter with the best F1 value to the path under `models/pretrain_pt`.
      - When testing, the model parameters are read from `models/pretrain_pt`.
-3. <b>T5-Large:</b> Run `T5.ipynb` in the `models/` directory:
+3. <b>T5-Large:</b> choose `model_type = 9` to call for the T5 model:
      - Unlike t5-Base, set parameter weight = 't5-large'.
      - Other steps are similar to the above.
   
