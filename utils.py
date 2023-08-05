@@ -20,6 +20,8 @@ from models.SATT_BILSTM import satt_bl
 from models.ATT_BILSTMCRF import att_blcrf
 from models.SATT_BILSTMCRF import satt_blcrf
 from models.SATT_BILSTMCRF_GloVe import satt_blcrf_glove
+from models.BERT import BERT
+from models.T5 import T5
 from torch.utils.data import Dataset
 
 
@@ -107,6 +109,12 @@ def get_model(model_type):
 
     if model_type == 7:
         model_name = satt_blcrf_glove
+
+    if model_type == 8:
+        model_name = BERT
+
+    if model_type == 9:
+        model_name = T5
 
     return model_name
 
