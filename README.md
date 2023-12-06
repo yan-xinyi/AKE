@@ -123,9 +123,7 @@ System environment is set up according to the following configuration:
     - `batch_size`: refers to the number of examples (or samples) that are processed together in a single forward/backward pass during the training or inference process of a machine learning model.
     - `max_length`: is a parameter that specifies the maximum length (number of tokens) allowed for a sequence of text input. It is often used in natural language processing tasks, such as text generation or text classification.
 3. <b>Modeling:</b> Modifying combinations of additive cognitive features in the model.
-
    For example, the code below means add all 25 features into the model:
-
          `input = torch.cat([input, inputs['et'], inputs['eeg']], dim=-1)`
 5. <b>Training and testing:</b> based on your system, open the terminal in the root directory 'AKE' and type this command:
     `python main.py` 
