@@ -164,4 +164,4 @@ In order to compare the evaluation results more intuitively, we used the followi
 ## Citation
 Please cite the following paper if you use this code and dataset in your work.
     
->Xinyi Yan, Yingyi Zhang, Chengzhi Zhang. Utilizing Cognitive Signals Generated during Human Reading to Enhance Keyphrase Extraction from Microblogs. ***Information Processing and Management***, 2023 (Under Review).
+>Xinyi Yan, Yingyi Zhang, Chengzhi Zhang. Utilizing Cognitive Signals Generated during Human Reading to Enhance Keyphrase Extraction from Microblogs. ***Information Processing and Management***, 2024 (in press）.
