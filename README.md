@@ -70,7 +70,7 @@ Specifically, there are <b>17 Eye-tracking features</b> and <b>8 EEG features</b
 
 <div align=center>
 Table 1. Summary of Eye-Tracking Features
-<img src="https://yan-xinyi.github.io/figures/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
+<img src="https://github.com/yan-xinyi/images/AKE/ET_features.png" width="750px" alt="Table 1. Summary of Eye-Tracking Features">
 </div>
 
 - <b>EEG features</b>
@@ -80,7 +80,7 @@ Table 1. Summary of Eye-Tracking Features
 <div align=center> 
   
 Table 2. Summary of EEG Features<br>
-<img src="https://yan-xinyi.github.io/figures/EEG_features.png" width="450px" alt="Table 2. Summary of EEG Features">
+<img src="https://github.com/yan-xinyi/images/AKE/EEG_features.png" width="450px" alt="Table 2. Summary of EEG Features">
 </div>
 
 
@@ -149,7 +149,7 @@ In this study, we compared the performance of the AKE under four feature combina
 
 <div align=center> 
 Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading <br>
-<img src="https://yan-xinyi.github.io/figures/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
+<img src="https://github.com/yan-xinyi/images/AKE/Case Study.png" width="600px" alt="Table 3. Example of AKE incorporating Cognitive Signals Generated during Human Reading">
 
 
 </div>
